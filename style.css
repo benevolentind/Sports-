@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    color: #222;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-desc {
+    max-width: 850px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ===== Header & Nav ===== */
+header {
+    background: #111111; /* Modern Dark Header like Janletics */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    object-fit: contain;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+    transition: .3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #FFD700;
+    transition: 0.4s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero h2 {
+    font-size: 28px;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Buttons ===== */
+.btn {
+    display: inline-block;
+    background: #FFD700;
+    color: #000;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+    border: 2px solid #FFD700;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #FFD700;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+    margin-left: 15px;
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* ===== Layout Sections ===== */
+section {
+    padding: 80px 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #111;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* ===== Grid Cards ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.4s;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #111;
+}
+
+.p-20 {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.p-20 h3 {
+    color: #0b5ed7;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+/* ===== Stats Section ===== */
+#stats {
+    background: #111111;
+    color: #fff;
+}
+
+#stats h2 {
+    color: #fff;
+}
+
+.card-stat {
+    background: rgba(255,255,255,0.05);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card-stat h3 {
+    font-size: 45px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+/* ===== Factory Unit Single Layout ===== */
+.factory-wrapper {
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+}
+
+/* ===== Form (Request Quote) ===== */
+#quote {
+    background: #f9f9f9;
+}
+
+.quote-form {
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+}
+
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+    border-color: #111;
+}
+
+.quote-form button {
+    border: none;
+    cursor: pointer;
+    background: #111;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.quote-form button:hover {
+    background: #FFD700;
+    color: #000;
+}
+
+/* ===== Contact Section ===== */
+#contact {
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #fff;
+}
+
+#contact p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+#contact .btn {
+    margin-top: 20px;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 1px solid #222;
+}
+
+/* ===== Floating WhatsApp ===== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: .3s;
+    z-index: 9999;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background: #1ebe5d;
+}
+
+/* ===== Responsive Setup ===== */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav ul {
+        gap: 15px;
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+    .hero h2 {
+        font-size: 20px;
+    }
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .btn-secondary {
+        margin-left: 0;
+    }
+}
